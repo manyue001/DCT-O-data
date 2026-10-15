@@ -1,0 +1,138 @@
+{
+  "release_date": "2026-10-15",
+  "repository": "https://github.com/manyue001/DCT-O-data",
+  "scope": "Selected existing manuscript result data; not raw sensor observations or a complete reproduction package.",
+  "source_collection": "Archived manuscript result/evidence files retained by the authors.",
+  "source_files": {
+    "paired_per_scenario_raw_results.csv": {
+      "sha256": "301dfa1f96d8d87df6a0dc622afadd5bbaba0a75fc580ad2c06d253c1c3e79bd",
+      "rows": 1050
+    },
+    "visible_overcorr_per_scenario.csv": {
+      "sha256": "d17cd2366446b3014e7959a1589ff4046c9468292f30475b89c38f023dade1fc",
+      "rows": 150
+    },
+    "beijing_summary.csv": {
+      "sha256": "721eee4f9fbd826123be6d58a0e0504c7761d914d37505318ef1f1a4381745de",
+      "rows": 4
+    }
+  },
+  "exports": [
+    {
+      "file": "data/standard_numerical_results.csv",
+      "source_file": "paired_per_scenario_raw_results.csv",
+      "rows": 525,
+      "columns": [
+        "method",
+        "seed",
+        "attack_mode",
+        "mask_rate",
+        "malicious_ratio",
+        "mae",
+        "rmse"
+      ],
+      "selected_methods": [
+        "RAW",
+        "WEI",
+        "TD",
+        "ST",
+        "PRBTD-O",
+        "DTC",
+        "DTC-O"
+      ],
+      "purpose": "Table II numerical metrics; numerical operating points and condition aggregates.",
+      "transformation": "Select rows and columns only; original cell strings preserved."
+    },
+    {
+      "file": "data/standard_detection_results.csv",
+      "source_file": "paired_per_scenario_raw_results.csv",
+      "rows": 450,
+      "columns": [
+        "method",
+        "seed",
+        "attack_mode",
+        "mask_rate",
+        "malicious_ratio",
+        "malicious_precision",
+        "malicious_recall",
+        "malicious_f1"
+      ],
+      "selected_methods": [
+        "WEI",
+        "TD",
+        "ST",
+        "PRBTD-O",
+        "DTC",
+        "DTC-O"
+      ],
+      "purpose": "Table II detection metrics; F1 operating points and condition aggregates.",
+      "transformation": "Select rows and columns only; original cell strings preserved."
+    },
+    {
+      "file": "data/ablation_results.csv",
+      "source_file": "paired_per_scenario_raw_results.csv",
+      "rows": 300,
+      "columns": [
+        "method",
+        "seed",
+        "attack_mode",
+        "mask_rate",
+        "malicious_ratio",
+        "malicious_f1",
+        "mae",
+        "rmse"
+      ],
+      "selected_methods": [
+        "DTC-O",
+        "DTC-O-NE",
+        "DTC-O-NI",
+        "DTC-O-NC"
+      ],
+      "purpose": "Table VII unrounded per-scenario component-ablation results.",
+      "transformation": "Select rows and columns only; original cell strings preserved."
+    },
+    {
+      "file": "data/visible_overcorrection.csv",
+      "source_file": "visible_overcorr_per_scenario.csv",
+      "rows": 150,
+      "columns": [
+        "method",
+        "seed",
+        "attack_mode",
+        "mask_rate",
+        "scenario_id",
+        "visible_overcorr",
+        "visible_numerator",
+        "visible_denominator",
+        "total_rows",
+        "masked_rows",
+        "visible_rows"
+      ],
+      "selected_methods": [
+        "PRBTD-O",
+        "DTC-O"
+      ],
+      "purpose": "Visible-only overcorrection for the two principal comparators, including denominators.",
+      "transformation": "Select rows and columns only; original cell strings preserved."
+    },
+    {
+      "file": "data/beijing_four_site_summary.csv",
+      "source_file": "beijing_summary.csv",
+      "rows": 2,
+      "columns": [
+        "method",
+        "malicious_f1",
+        "MAE",
+        "RMSE"
+      ],
+      "selected_methods": [
+        "PRBTD-O",
+        "DTC-O"
+      ],
+      "purpose": "Table V F1, MAE, and RMSE: existing Beijing-four-site aggregate results.",
+      "transformation": "Select rows and columns only; original cell strings preserved."
+    }
+  ],
+  "value_integrity": "Every exported cell was compared as a string to the corresponding original source cell. All comparisons passed.",
+  "experiments_rerun_for_release": false
+}
