@@ -19,7 +19,7 @@ The standard grid crosses five attack modes (`gaussian`, `bias`, `low_noise`, `b
 
 - Compute an unweighted mean over the 75 scenario rows for each method to obtain the standard and ablation table metrics. F1 is the mean of scenario F1 scores, not F1 recomputed from the mean precision and recall.
 - RAW does not define a malicious-user detector. It appears only in the numerical file; source diagnostic detector values for RAW are not released as paper detection results.
-- MAE and RMSE use the full-output evaluation universe. The overcorrection file uses **visible submissions only**: `visible_overcorr = visible_numerator / visible_denominator`. Average the scenario rates, rather than pooling their counts, to recover the reported comparison. Legacy all-row overcorrection columns from the source files are excluded.
+- MAE and RMSE use the full-output evaluation universe. The overcorrection file uses  `visible_overcorr = visible_numerator / visible_denominator`. Average the scenario rates, rather than pooling their counts, to recover the reported comparison. Legacy all-row overcorrection columns from the source files are excluded.
 - The released visible-only counts cover DTC-O and PRBTD-O. Overcorrection and output-coverage values for the other methods are not included in this subset.
 - The Table VII F1 loss for DTC-O-NI is **6.617063869... percentage points**, which rounds to **6.62**. The four-decimal values printed in the manuscript do not preserve this difference exactly.
 - The Beijing file contains already-aggregated results for Aotizhongxin, Changping, Dingling, and Dongsi. It does not contain external per-scenario observations or overcorrection denominators.
