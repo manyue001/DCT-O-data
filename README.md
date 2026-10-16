@@ -1,4 +1,4 @@
-# DTC-O paper: selected experimental result data
+# DTC-O paper:result data
 
 This repository accompanies **DTC-O: Dynamic Trust Calibration for Full-Output Sensor Data Enhancement in Mobile Crowdsensing**.
 
