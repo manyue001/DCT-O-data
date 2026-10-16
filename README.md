@@ -2,7 +2,6 @@
 
 This repository accompanies **DTC-O: Dynamic Trust Calibration for Full-Output Sensor Data Enhancement in Mobile Crowdsensing**.
 
-This initial release contains selected existing result data from the manuscript, rather than the original sensor observations or a complete experiment-reproduction package. The data were exported on 2026-10-15 by selecting rows and columns from the archived result files. No experiments were rerun, no parameters were selected, and no result values were changed for this release.
 
 ## Included files
 
